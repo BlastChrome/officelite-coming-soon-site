@@ -1,0 +1,84 @@
+/* utility styles */
+/* font awesome imports */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+/* resets */
+
+:root {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --blue-300: #5175ff;
+  --blue-100: #829cff;
+  --dark-500: #333950;
+  --dark-600: #25293a;
+  --grey-300: #747b95;
+  --red-600: #f05b5b;
+}
+/* containers */
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.grid {
+  display: grid;
+}
+.container {
+  max-width: 1110px;
+  width: 90%;
+  margin: 0 auto;
+}
+/* font styling */
+html {
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 28px;
+}
+h3 {
+  font-size: 16px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+p,
+button {
+  font-size: 16px;
+}
+button {
+  font-weight: bold;
+}
+
+/* margin */
+.my-1 {
+  margin-top: 1rem;
+}
+.my-2 {
+  margin-top: 1.5rem;
+}
+.my-3 {
+  margin-top: 2rem;
+}
+.my-4 {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  /* font styling */
+  h1 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
