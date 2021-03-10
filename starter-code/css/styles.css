@@ -2,6 +2,7 @@
 body {
   overflow-x: hidden;
   background-color: var(--body-color);
+  position: relative;
 }
 /* header */
 header {
@@ -39,6 +40,13 @@ header .header-pattern {
 }
 
 /* section-b */
+.section-b {
+  position: relative;
+  /* top: 59rem; */
+}
+/* .section-b .container {
+  position: absolute;
+} */
 .section-b .flex {
   align-items: center;
 }
@@ -47,14 +55,59 @@ header .header-pattern {
 }
 .section-b .card {
   min-width: 327px;
+  height: 512px;
+}
+.section-b .card h1 {
+  margin: 0;
 }
 .section-b .grid .card:nth-of-type(2) {
   position: relative;
-  /* z-index: 0; */
 }
 .section-b .grid .card:nth-of-type(2) img {
   position: absolute;
   bottom: 10rem;
+}
+
+/* footer */
+footer {
+  background-color: var(--dark-600);
+  min-height: 1248px;
+  width: 100%;
+  position: absolute;
+  bottom: -20rem;
+  z-index: -49;
+}
+footer .grid {
+  padding-top: 65rem;
+  justify-content: center;
+  align-content: center;
+}
+footer .grid span {
+  color: #5175ff;
+}
+footer .container .grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  /* background-color: red; */
+}
+footer .timer-card p {
+  margin: 0;
+}
+footer .timer-card p:nth-of-type(1) {
+  font-size: 32px;
+}
+
+footer .timer-container {
+  justify-content: space-between;
+  padding-top: 0;
+}
+footer .timer-container .flex {
+  flex-direction: column;
+  justify-content: space-around;
+}
+footer button {
+  margin: 20px 0;
+  justify-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -88,15 +141,13 @@ header .header-pattern {
   }
   /* section-b */
   .section-b .card {
+    height: 318px;
     width: 689px;
     flex-direction: row;
     justify-content: space-around;
   }
   .section-b .card .flex {
     align-items: flex-start;
-  }
-  .section-b .card h1 {
-    margin: 0;
   }
   .section-b .grid .card:nth-of-type(2) img {
     top: -17rem;
@@ -117,6 +168,18 @@ header .header-pattern {
   .section-b .card .btn-sp {
     right: 150%;
   }
+  /* footer */
+  footer {
+    min-height: 986px;
+    bottom: -23rem;
+  }
+  footer .grid {
+    padding-top: 44rem;
+  }
+  footer .timer-container {
+    justify-content: space-between;
+    padding-top: 0;
+  }
 }
 @media screen and (min-width: 1024px) {
   header {
@@ -134,6 +197,7 @@ header .header-pattern {
   .section-b .card {
     flex-direction: column;
     width: 350px;
+    height: 508px;
   }
   .section-b .card button {
     position: static;
@@ -147,6 +211,18 @@ header .header-pattern {
   .section-b .grid .card:nth-of-type(2) img {
     top: -23rem;
     right: -16.5rem;
+  }
+  /* footer */
+  footer {
+    min-height: 603px;
+    bottom: -19rem;
+  }
+  footer .grid {
+    padding-top: 24rem;
+  }
+  footer .timer-container {
+    justify-content: space-between;
+    padding-top: 0;
   }
 }
 
@@ -163,5 +239,9 @@ header .header-pattern {
   }
   .section-a img {
     width: 475px;
+  }
+  footer .timer-container {
+    justify-content: space-between;
+    padding-top: 0;
   }
 }
