@@ -1,5 +1,8 @@
 /* main style sheet */
-
+body {
+  overflow-x: hidden;
+  background-color: var(--body-color);
+}
 /* header */
 header {
   padding-top: 46px;
@@ -35,6 +38,25 @@ header .header-pattern {
   text-align: center;
 }
 
+/* section-b */
+.section-b .flex {
+  align-items: center;
+}
+.section-b .grid {
+  justify-content: center;
+}
+.section-b .card {
+  min-width: 327px;
+}
+.section-b .grid .card:nth-of-type(2) {
+  position: relative;
+  /* z-index: 0; */
+}
+.section-b .grid .card:nth-of-type(2) img {
+  position: absolute;
+  bottom: 10rem;
+}
+
 @media screen and (min-width: 768px) {
   header {
     padding-top: 72px;
@@ -64,6 +86,37 @@ header .header-pattern {
     text-align: left;
     max-width: 345px;
   }
+  /* section-b */
+  .section-b .card {
+    width: 689px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .section-b .card .flex {
+    align-items: flex-start;
+  }
+  .section-b .card h1 {
+    margin: 0;
+  }
+  .section-b .grid .card:nth-of-type(2) img {
+    top: -17rem;
+    right: 6rem;
+  }
+  .section-b .card .card-top {
+    margin: 0 0 50px 0;
+  }
+  .section-b .card .card-bot {
+    position: relative;
+  }
+
+  .section-b .card button {
+    position: absolute;
+    bottom: 0;
+    right: 170%;
+  }
+  .section-b .card .btn-sp {
+    right: 150%;
+  }
 }
 @media screen and (min-width: 1024px) {
   header {
@@ -73,14 +126,38 @@ header .header-pattern {
   .section-a img {
     width: 400px;
   }
+  /* section-b */
+  .section-b .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 30px;
+  }
+  .section-b .card {
+    flex-direction: column;
+    width: 350px;
+  }
+  .section-b .card button {
+    position: static;
+  }
+  .section-b .card .card-top {
+    margin: 0;
+  }
+  .section-b .card .flex {
+    align-items: center;
+  }
+  .section-b .grid .card:nth-of-type(2) img {
+    top: -23rem;
+    right: -16.5rem;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  /* header */
   header .header-pattern {
     width: 1134px;
     right: -33rem;
     top: -36.5rem;
   }
+  /* section-a */
   .section-a .sec-a-content {
     max-width: 540px;
   }

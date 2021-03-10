@@ -4,12 +4,14 @@
 /* resets */
 
 :root {
+  --body-color: #f5f5f7;
   --blue-300: #5175ff;
   --blue-100: #829cff;
   --blue-50: #e4eaff;
   --dark-500: #333950;
   --dark-600: #25293a;
   --grey-300: #747b95;
+  --grey-100: #d3dcff;
   --red-600: #f05b5b;
 }
 /* containers */
@@ -25,6 +27,17 @@
   width: 90%;
   margin: 0 auto;
 }
+.card {
+  border-radius: 13px;
+  padding: 40px 0;
+}
+.card-light {
+  background-color: #fff;
+}
+.card-dark {
+  background-color: var(--blue-300);
+}
+
 /* font styling */
 html {
   font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
@@ -52,6 +65,12 @@ p,
 .grey-text {
   color: var(--grey-300);
 }
+.grey-text-2 {
+  color: var(--grey-100);
+}
+.light-text {
+  color: #fff;
+}
 .text-align-center {
   text-align: center;
 }
@@ -60,6 +79,9 @@ p,
 }
 .text-align-right {
   text-align: right;
+}
+.big-text {
+  font-size: 56px;
 }
 
 /* buttons */
@@ -71,6 +93,8 @@ p,
   border-radius: 50px;
   border: none;
   filter: drop-shadow(0px 3px 5px rgba(41, 41, 41, 0.25));
+  cursor: pointer;
+  z-index: 30;
 }
 .btn:focus {
   outline: none;
